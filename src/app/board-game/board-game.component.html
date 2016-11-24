@@ -1,3 +1,20 @@
-<p>
-  board-game works!
-</p>
+<section class="ggstat">
+  <header class="header">
+    <h1>Board Games</h1>
+    <div class="container">
+      <h4>Add BoardGame</h4>
+      <form [formGroup]="myForm" novalidate (ngSubmit)="save(myForm)">
+        
+        <button type="submit" [disabled]="!myForm.valid">Add Board Game</button>
+      </form>
+    </div>
+
+    <input class="new-bg" placeholder="name of boardGame?" autofocus="" [([(ngModel)]="newBg.title" (keyup.enter)="addBoardGame()">
+    <!--TODO MAKE IT SO I CAN PUT MORE THAN JUST THE TITLE IN -->
+    <!--<input class="new-bg" placeholder="bgg link" autofocus="" [([(ngModel)]="newBg.title" (keyup.enter)="addBoardGame()">-->
+  </header>
+  <section class="main" *ngIf="bgs.length > 0">
+    <ul class="bg-list">
+      <li *ngFor="let bg of bgs" [class.completed]="bg.complete">
+        <div class="view">
+          <input class 

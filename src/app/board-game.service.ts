@@ -23,7 +23,7 @@ export class BoardGameService {
   }
 
   updateBoardGameByID(id: number, values: Object = {}): BoardGame {
-    let boardGame = this.getBoardGameId(id);
+    let boardGame = this.getBoardGameById(id);
     if(!boardGame) {
       return null;
     }
@@ -35,7 +35,7 @@ export class BoardGameService {
     return this.bgs;
   }
 
-  getBoardGameId(id: number): BoardGame{
+  getBoardGameById(id: number): BoardGame{
     return this.bgs.filter(boardGame => boardGame.id === id).pop();
   }
 }

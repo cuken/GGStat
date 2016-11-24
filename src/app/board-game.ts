@@ -11,7 +11,7 @@ export class BoardGame {
     maxNumPlayers: number;
     averageGameTime: number;
     owned: boolean;
-    lastPayed: Date
+    lastPlayed: Date
 
     constructor(values: Object ={}) {
         Object.assign(this, values);

@@ -24,6 +24,6 @@ describe('BoardGame', () => {
         expect(bg.minNumPlayers).toEqual(1);
         expect(bg.maxNumPlayers).toEqual(5);
         expect(bg.owned).toEqual(true);
-        expect(bg.owned).toBeLessThanOrEqual(Date.now());
+        expect(bg.lastPlayed).toBeLessThanOrEqual(Date.now());
     });
 });

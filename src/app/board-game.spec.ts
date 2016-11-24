@@ -23,6 +23,7 @@ describe('BoardGame', () => {
         expect(bg.image).toEqual('/test.png');
         expect(bg.minNumPlayers).toEqual(1);
         expect(bg.maxNumPlayers).toEqual(5);
+        expect(bg.averageGameTime).toEqual(120);
         expect(bg.owned).toEqual(true);
         expect(bg.lastPlayed).toBeLessThanOrEqual(Date.now());
     });

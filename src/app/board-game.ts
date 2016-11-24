@@ -3,6 +3,7 @@
 export class BoardGame {
     //PROPERTIES
     //name of the property : type of property = 'default value if you want'
+    id: number;
     title: string;
     bggLink: string;
     image: string;

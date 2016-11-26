@@ -8,10 +8,24 @@ import { BoardGame } from '../board-game';
   styleUrls: ['./board-game.component.css']
 })
 export class BoardGameComponent implements OnInit {
+ // public addBGForm: FormGroup;
+ // public submitted: boolean;
+ // public events: any[] = [];
+
+  title: string;
+  bggLink: string;
+
 
   constructor() { }
 
   ngOnInit() {
   }
+
+  //save(model: BoardGame, isValid: boolean){
+    //this.submitted = true;
+
+    //Call the API to save out the new board game
+    //console.log(model, isValid);
+  //}
 
 }

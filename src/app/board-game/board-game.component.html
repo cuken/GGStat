@@ -1,20 +1,18 @@
-<section class="ggstat">
-  <header class="header">
-    <h1>Board Games</h1>
-    <div class="container">
-      <h4>Add BoardGame</h4>
-      <form [formGroup]="myForm" novalidate (ngSubmit)="save(myForm)">
-        
-        <button type="submit" [disabled]="!myForm.valid">Add Board Game</button>
-      </form>
-    </div>
-
-    <input class="new-bg" placeholder="name of boardGame?" autofocus="" [([(ngModel)]="newBg.title" (keyup.enter)="addBoardGame()">
-    <!--TODO MAKE IT SO I CAN PUT MORE THAN JUST THE TITLE IN -->
-    <!--<input class="new-bg" placeholder="bgg link" autofocus="" [([(ngModel)]="newBg.title" (keyup.enter)="addBoardGame()">-->
-  </header>
-  <section class="main" *ngIf="bgs.length > 0">
-    <ul class="bg-list">
-      <li *ngFor="let bg of bgs" [class.completed]="bg.complete">
-        <div class="view">
-          <input class 
+<!--- Some shit up here -->
+<form #test="ngForm" novalidate>
+  <div>
+    <label>Title</label>
+    <input type="text" required name="title" [(ngModel)]="title" #myTitle="ngModel">
+    <small [hidden]="myTitle.valid">
+      Title is required.
+    </small>
+    <br>
+    <label>Board Game Geek Link</label>
+    <input type="text" name="bggLink" [(ngModel)]="bggLink" #myBggLink="ngModel">
+    <small [hidden]="myBggLink.valid">
+      Title is required.
+    </small>
+    
+  </div>  
+  <button type="submit">Add Board Game</button>
+</form>
